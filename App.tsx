@@ -30,11 +30,20 @@ export default function App() {
   console.log(data);
 
   return (
-    <div className="container">
-      <h1>Users:</h1>
+    <main className="container">
+      <h2>
+        React Practice by:{' '}
+        <a
+          href="https://www.youtube.com/@CodigoMentorTutoriales"
+          target="_blank"
+          rel="noreferrer"
+        >
+          CodigoMentor
+        </a>
+      </h2>{' '}
       {Object.keys(data).map((key) => (
         <React.Fragment key={key}>
-          <h4> {`Grupo ${key}:`} </h4>
+          <h3 style={{marginBottom: 4}} > {`Grupo ${key}:`} </h3>
           <ul>
             {data[key].map(({ nombre }) => (
               <li>{nombre}</li>
@@ -42,6 +51,6 @@ export default function App() {
           </ul>
         </React.Fragment>
       ))}
-    </div>
+    </main>
   );
 }
