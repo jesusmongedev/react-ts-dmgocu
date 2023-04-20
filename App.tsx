@@ -30,7 +30,7 @@ export default function App() {
   console.log(data);
 
   return (
-    <main className="container">
+    <div className="container">
       <h2>
         React Practice by:{' '}
         <a
@@ -43,7 +43,7 @@ export default function App() {
       </h2>{' '}
       {Object.keys(data).map((key) => (
         <React.Fragment key={key}>
-          <h3 style={{marginBottom: 4}} > {`Grupo ${key}:`} </h3>
+          <h3 style={{ marginBottom: 4 }}> {`Grupo ${key}:`} </h3>
           <ul>
             {data[key].map(({ nombre }) => (
               <li>{nombre}</li>
@@ -51,6 +51,6 @@ export default function App() {
           </ul>
         </React.Fragment>
       ))}
-    </main>
+    </div>
   );
 }
